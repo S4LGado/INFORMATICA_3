@@ -1,0 +1,14 @@
+25-08-2022
+
+En este ejercicio que tratan los diferentes tipos de datos
+que se pueden manejar en python. 
+
+* Se realizó el manejo de operaciones básicas como suma y división.
+
+* Se realizó una conversión de tipos de datos a través de comandos como:
+    -> Int
+    -> Float
+    -> Str
+
+* Se manejó el comando <print> para imprimir el mensaje de qué tipo de 
+  dato se estaba manejando.
