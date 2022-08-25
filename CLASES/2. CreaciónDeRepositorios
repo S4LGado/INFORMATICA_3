@@ -8,6 +8,9 @@ locales y en la nube
 
 1. Tener git y cuenta gitHub
 2. Configurar usuario y correo
+      - Abrimos el terminal y escribimos lo siguiente
+      - git config --global user.name "S4LGado" 
+      - git config --global user.email "juanessalgado2001@gmail.com"
 3. Ir al icono (3 nodos)
 4. Ir al working directory (Inicializar un repositorio)
    dando click al boton <initialize repository>
@@ -15,3 +18,5 @@ locales y en la nube
    encima del archivo.
 6. Llevarlo al commit area
    para ello se selecciona el boton <commit>
+7. Llevarlo a la nube
+   Para ello selecciono el icono en forma de nube
