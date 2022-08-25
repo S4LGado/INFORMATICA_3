@@ -1,0 +1,17 @@
+25-08-2022
+
+Se aprende a hacer uso de git y gitHub, los cuales 
+son herramientas para el uso y manejo de repositorios
+locales y en la nube
+
+## Pasos para crear repositorio =>
+
+1. Tener git y cuenta gitHub
+2. Configurar usuario y correo
+3. Ir al icono (3 nodos)
+4. Ir al working directory (Inicializar un repositorio)
+   dando click al boton <initialize repository>
+5. Se selecciona el signo "+" que aparece al poner el cursor
+   encima del archivo.
+6. Llevarlo al commit area
+   para ello se selecciona el boton <commit>
