@@ -4,7 +4,8 @@ OPERADORES
 
 Operador de asignación: =
 Operadores artiméticos: +, -, *, /, // (División entera), % (Residuo de una división), ** (Potencia)
-Operadores lógicos: and, or, not
+Operadores lógicos: and, or, not (Se utilizan bastante en booleanos ya que permiten definir 
+                                  una lógica de verdadero o falso según la utilidad que se necesite)
 Operadores de comparación: >, >=, <, <=, !=
 Operadores de pertenencia: in, not in
 Operadores de conjuntos: | (Unión), & (Intersección), - (Diferencia)
