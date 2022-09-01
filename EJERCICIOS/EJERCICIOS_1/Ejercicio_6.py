@@ -8,14 +8,11 @@ b = float(input ("ingrese la segunda nota: "))
 c = float(input ("ingrese la tercer nota: "))
 
 sparcial = a*0.15 + b*0.25 + c*0.20
-e = 5.0 - sparcial
-d = e /0.4
+e = float(3.0 - sparcial)
+d = e / 0.4
 
 if sparcial >= 3.0:
     print("Con sacar 0.0 en la nota ya pasa")
 
-if e < 3.0 and d<=5:
+else:
     print("Necesita sacar :",d," para pasar la materia")
-
-if e < 3.0 and d>5:
-    print("Ya no pasa la materia")

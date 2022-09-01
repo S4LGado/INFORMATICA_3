@@ -7,7 +7,7 @@ a = float(input ("ingrese la primer nota: "))
 b = float(input ("ingrese la segunda nota: "))
 
 sparcial = a*0.15 + b*0.25 
-d = (5 - sparcial)/0.4
+d = (3 - sparcial)/0.4
 
 if sparcial >= 3.0:
     print("Con sacar 0.0 en la nota ya pasa")
