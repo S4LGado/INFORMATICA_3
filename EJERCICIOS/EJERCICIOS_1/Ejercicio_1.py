@@ -1,3 +1,4 @@
+#==>  EJERCICIO 1 
 """ Dada una cantidad de segundos, realice un algoritmo que los convierta a unidades horas,minutos
 mostrando en pantalla en formato "horas:minutos"  """
 
