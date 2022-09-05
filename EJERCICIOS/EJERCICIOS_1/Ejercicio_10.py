@@ -44,7 +44,7 @@ print (" El salario que gana un empleado es de: ", salario)
 # Literal b
 
 if Czapatos > 2000:
-    rint ("los zapatos deben cambiar su comisión")
+    print ("los zapatos deben cambiar su comisión")
 if Ctenis > 2000:
     print ("los tenis deben cambiar su comisión")
 if Ccamisas> 2000:
@@ -59,3 +59,21 @@ if Cvestidos > 2000:
     print ("los vestidos deben cambiar su comisión")
 if Cmedias > 2000:
     print ("las medias deben cambiar su comisión")
+
+# Literal C
+
+if Czapatos > 1900:
+    Czapatos = 1900/50000
+    print ("los zapatos deben cambiar su comisión a: ",Czapatos )
+if Ctenis > 1900:
+    Ctenis = 1900/70000
+    print ("los tenis deben cambiar su comisión a: ", Ctenis)
+if Ccamisas > 1900:
+    Ccamisas = 1900/40000
+    print ("las camisas deben cambiar su comisión a: ", Ccamisas)
+if Cblusas > 1900:
+    Cblusas = 1900/80000
+    print ("las blusas deben cambiar su comisión a: ", Cblusas)
+if Cvestidos > 1900:
+    Cvestidos = 1900/95000
+    print ("los vestidos deben cambiar su comisión a: ", Cvestidos)
