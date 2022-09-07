@@ -78,7 +78,7 @@ Una contrasena de un programa, debe incluir:
 Determine si al ingresar una contrasena, se cumple con todas las condiciones.
 
 """
-
+"""
 condicion1 = <Contenga mayusculas>
 condicion2 = <Contenga minusculas>
 condicion3 = <Contenga numeros>
@@ -89,4 +89,4 @@ if condicion1 and condicion2 and condicion3 and condicion4 and condicion5:
     print ("Es valido").
 
 elif 
-    print ("No es valido")
+    print ("No es valido")"""

@@ -5,8 +5,7 @@ b = 2
 c = 5
 
 # Operadores ariméticos
-""" Realice las siguientes operaciones mentalmente : 
-3 + 9
+""" 3 + 9
 3.0 + 9
 9 ** 0.5
 2 ** 32
@@ -19,8 +18,7 @@ c = 5
 (1,2,3) + (1,) """
 
 # Operadores Lógicos
-""" Realice las sigueintes operaciones mentalente : 
-True and True
+""" True and True
 False and True
 False and False
 not True 
@@ -38,8 +36,7 @@ False or True
 "" or "false" """
 
 # Operadores de comparación 
-""" Realizar las siguientes operaciones: 
-1 > 2
+""" 1 > 2
 1 < 3
 1 == 1
 2 != 1
@@ -52,8 +49,7 @@ True > False
 
 # Operadores de pertenencia
 
-""" Realizar las siguientes operaciones:
-"a" in "abcdefg"
+""" "a" in "abcdefg"
 "A" in "ABCDEFG"
 1 in [1, 2, 3]
 1 in ["1", "2", "3"]
