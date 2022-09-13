@@ -1,0 +1,15 @@
+13- 09- 2022
+
+Según el tipo de variable que se maneje en python es posible determinar si es verdadero o no que tipo
+de accines se pueden realizar para las mismas
+
+Ejemplo:
+    print ("hola", int) #Escribirá falso
+    print (("1","2","3"), list) #Escribirá falso
+
+Es por esto que hay diferentes métodos con los cuales se manejan las variables
+=> para llamar estos métodos se utiliza el "."
+Ejemplo:
+
+    cadena = "MundoCruel"
+    print(cadena.lower()) Pone en minuscula la letra

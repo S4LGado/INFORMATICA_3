@@ -99,4 +99,23 @@ print(lista)
 print(max(lista))
 """
 
-#
+#Contraseña
+"""
+contraseña = input("Digite su contraseña: ")
+tamaño = len(contraseña)
+cont = 0
+validez = False
+while cont < tamaño:
+        if contraseña[cont] in "abcdefghijklmnopqrstuvwxyz":
+                validez = True
+        if contraseña[cont] in "1234567890":
+                validez = True
+        if contraseña[cont] in "!#$%&/()=@":
+                validez = True
+cont = cont + 1 
+
+if validez == False:
+        print(" Su cotraseña no es valida")
+elif validez == True:
+        print("Su contraseña es correcta")
+"""
