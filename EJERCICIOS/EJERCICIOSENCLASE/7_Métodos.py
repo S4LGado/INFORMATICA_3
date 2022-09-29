@@ -2,7 +2,7 @@ cadena = "MundoCruel"
 
 
 
-# Buscar Métodos que hagan lo siguiente
+# Metodos de los String
 """
 Retornar caracteres en mayusculas
 Retornar caracteres en minusculas
@@ -70,3 +70,80 @@ Pasar la cadena a formato de títtulo
 Contar el número de veces que aparecen las vocales
 
 """
+
+cadena = 'holamundocruel'
+print(cadena [0]) # Extrae el primer elemento 
+print(cadena [-1]) # Extrae el ultimo elemento
+print(cadena [7]) # Extrae el elemento de la mitad
+
+print(cadena[6]+cadena[7])
+
+# Metodos de las listas
+
+lista = [1,'a',2,3,'b']
+
+lista.append('1000') # Agrega un valor la lista
+lista.append(10)
+lista.insert(5,10) # Inserta un valor en un indice deseado (indice,valor)
+lista.pop(0) # Indica que indice eliminar 
+lista.insert(4,'Salgado')
+
+# Son metodos inplace por lo tanto si se printean dan un None
+
+# Eliminar los elementos que no se pueden sumar algebraicamente
+# Sumar los elementos restantes afectando lista 2
+
+lista2 = [1,2,'Juan',3,'b','Salgado',10]
+lista2.pop(2)
+lista2.pop(3)
+lista2.pop(3)
+
+"""
+Otra forma de hacerlo es: 
+for indice in [2,3,3]:
+  lista2.pop(i)
+
+"""
+# Con Control+Shift+A se puede comentar todo lo seleccionado
+#Sumar los elementos sin afectar lista 3
+lista3 = [1,2,100,3,'b','Salgado',10,'holamundo',5]
+lista3copia = lista3.copy()
+lista3copia.pop(4)
+lista3copia.pop(4)
+lista3copia.pop(5)
+lista3copia.sort() # Organiza de menor a mayor
+lista3copia.sort(reverse = True) # Organiza de mayor a menor
+
+# Metodo indexado y slicing
+
+listaNueva = [1,2,3,4,5,'hola','cruel','mundo',100]
+
+# Metodo
+
+# Extraer el primer elemento de 2 maneras
+
+print(listaNueva[0],listaNueva[-9])
+
+# Extraer el ultimo elemento de 2 maneras
+
+print(listaNueva[8],listaNueva[-1])
+
+# Extraer el elmento de la mitad de 2 maneras
+
+print(listaNueva[4],listaNueva[-5])
+
+# Slicing
+
+# Extraer cada elemento de dos en dos
+print(listaNueva[0:9:2]) # Otra forma de llegar al final es [0::2]
+# Extraer hasta la mitad de la cadena
+print(listaNueva[0:5:1])
+# Extrear desde la mitad de la cadena en adelante
+print(listaNueva[5::1])
+# Extraer los elementos que son strings
+print(listaNueva[5:8])
+# Extraer los elementos que son enteros
+print(listaNueva[0:5] + [listaNueva[-1]])
+
+
+
