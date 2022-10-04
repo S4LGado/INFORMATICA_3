@@ -1,0 +1,11 @@
+# 04-10-2022
+
+# Diccionarios y sus metodos
+
+
+    diccionario = {
+        'Cristian pachon' : 3.0,
+        'Daniel Quintero' : 4.0,
+        'Esteban Chavez' : 5.0,
+        'Margarita Maria' : 3.5
+    }
