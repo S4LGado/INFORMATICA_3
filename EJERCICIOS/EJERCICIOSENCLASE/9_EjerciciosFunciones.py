@@ -45,3 +45,13 @@ y retorne el promedio
 def promedioCalificaciones(a):
   promedio = sum(a.values())/len(a.values())
   return promedio
+
+"""
+5) Producto de numeros
+"""
+
+def productoDeNumeros(*numeros): # Ese simbolo sirve para desempaquetar
+  resultado = 1
+  for numero in numeros:
+    resultado = resultado*numero
+    return resultado
