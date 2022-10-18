@@ -24,3 +24,4 @@ def suma2Listas(a,b):
     for i in range(0,len(a)):
         resultado.append(a[i]+b[i])
     return resultado
+    
