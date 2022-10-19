@@ -22,41 +22,44 @@ chuza3 = 0
 chuza4 = 0
 chuza5 = 0
 while jugando:
-  for fila in juego:
-    if fila[0] == "O":
-      chuza = chuza + 1
-      if chuza == 3:
-        ganaCirculo = True
-    if fila[1] == "O":
-      chuza1 = chuza1 + 1
-      if chuza1 == 3:
-        ganaCirculo = True
-    if fila[2] == "O":
-      chuza2 = chuza2 + 1
-      if chuza2 == 3:
-        ganaCirculo = True
-    if fila == ["O","O","O"]:
-      ganaCirculo = True      
-    if fila[0] == "X":
-      chuza3 = chuza3 + 1
-      if chuza3 == 3:
-        ganaCruz = True
-    if fila[1] == "X":
-      chuza4 = chuza4 + 1
-      if chuza4 == 3:
-        ganaCruz = True
-    if fila[2] == "X":
-      chuza5 = chuza5 + 1
-      if chuza5 == 3:
-        ganaCruz = True
-    if fila == ["X","X","X"]:
-      ganaCruz = True
-    if ganaCruz:
-      print("Gana Cruz")
-      break
-    if ganaCirculo:
-      print("Gana Circulo")
-      break
+  if fila1[0] == "O" and fila2[0] == "O" and fila3[0] == "O":
+    ganaCirculo = True
+  if fila1[1] == "O" and fila2[1] == "O" and fila3[1] == "O":   
+    ganaCirculo = True
+  if fila1[2] == "O" and fila2[2] == "O" and fila3[2] == "O":   
+    ganaCirculo = True
+  if fila1 == ["O","O","O"]:
+    ganaCirculo = True
+  if fila2 == ["O","O","O"]:
+    ganaCirculo = True
+  if fila3 == ["O","O","O"]:
+    ganaCirculo = True
+  if fila1[0] == "O" and fila2[1] == "O" and fila3[2] == "O":
+    ganaCirculo = True  
+  if fila1[2] == "O" and fila2[1] == "O" and fila3[0] == "O":
+    ganaCirculo = True
+  if fila1[0] == "X" and fila2[0] == "X" and fila3[0] == "X":
+    ganaCruz = True
+  if fila1[1] == "X" and fila2[1] == "X" and fila3[1] == "X":   
+    ganaCruz = True
+  if fila1[2] == "X" and fila2[2] == "X" and fila3[2] == "X":   
+    ganaCruz = True
+  if fila1 == ["X","X","X"]:
+    ganaCruz = True
+  if fila2 == ["X","X","X"]:
+    ganaCruz = True
+  if fila3 == ["X","X","X"]:
+    ganaCruz = True
+  if fila1[0] == "X" and fila2[1] == "X" and fila3[2] == "X":   
+    ganaCruz = True
+  if fila1[2] == "X" and fila2[1] == "X" and fila3[0] == "X":   
+    ganaCruz = True
+  if ganaCirculo:
+    print("Gana Circulo")
+    break
+  if ganaCruz:
+    print("Gana Cruz")
+    break
   circulo = int(input("Digite en que posicion colocar el circulo: "))
   if circulo in [1,2,3]:
     fila1.pop(circulo-1)
