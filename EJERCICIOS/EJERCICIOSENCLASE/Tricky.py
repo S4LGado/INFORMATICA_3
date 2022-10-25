@@ -9,7 +9,6 @@ print("7|8|9")
 fila1 = [" "," " ," "]
 fila2 = [" "," " ," "]
 fila3 = [" "," " ," "]
-juego = [fila1,fila2,fila3]
 circulo = 0
 cruz = 0
 jugando = True
@@ -70,9 +69,50 @@ while jugando:
   if circulo in [7,8,9]:
     fila3.pop(circulo-7)
     fila3.insert(circulo-7, "O") 
-  print(fila1)
-  print(fila2)
-  print(fila3)
+  fila1Vista = fila1[0] + '|' + fila1[1] + '|' + fila1[2] 
+  fila2Vista = fila2[0] + '|' + fila2[1] + '|' + fila2[2]
+  fila3Vista = fila3[0] + '|' + fila3[1] + '|' + fila3[2]
+  print(fila1Vista)
+  print(fila2Vista)
+  print(fila3Vista)
+  if fila1[0] == "O" and fila2[0] == "O" and fila3[0] == "O":
+    ganaCirculo = True
+  if fila1[1] == "O" and fila2[1] == "O" and fila3[1] == "O":   
+    ganaCirculo = True
+  if fila1[2] == "O" and fila2[2] == "O" and fila3[2] == "O":   
+    ganaCirculo = True
+  if fila1 == ["O","O","O"]:
+    ganaCirculo = True
+  if fila2 == ["O","O","O"]:
+    ganaCirculo = True
+  if fila3 == ["O","O","O"]:
+    ganaCirculo = True
+  if fila1[0] == "O" and fila2[1] == "O" and fila3[2] == "O":
+    ganaCirculo = True  
+  if fila1[2] == "O" and fila2[1] == "O" and fila3[0] == "O":
+    ganaCirculo = True
+  if fila1[0] == "X" and fila2[0] == "X" and fila3[0] == "X":
+    ganaCruz = True
+  if fila1[1] == "X" and fila2[1] == "X" and fila3[1] == "X":   
+    ganaCruz = True
+  if fila1[2] == "X" and fila2[2] == "X" and fila3[2] == "X":   
+    ganaCruz = True
+  if fila1 == ["X","X","X"]:
+    ganaCruz = True
+  if fila2 == ["X","X","X"]:
+    ganaCruz = True
+  if fila3 == ["X","X","X"]:
+    ganaCruz = True
+  if fila1[0] == "X" and fila2[1] == "X" and fila3[2] == "X":   
+    ganaCruz = True
+  if fila1[2] == "X" and fila2[1] == "X" and fila3[0] == "X":   
+    ganaCruz = True
+  if ganaCirculo:
+    print("Gana Circulo")
+    break
+  if ganaCruz:
+    print("Gana Cruz")
+    break
   cruz = int(input("Digite en que posicion colocar la cruz: "))
   if cruz in [1,2,3]:
     fila1.pop(cruz-1)
@@ -83,6 +123,9 @@ while jugando:
   if cruz in [7,8,9]:
     fila3.pop(cruz-7)
     fila3.insert(cruz-7, "X") 
-  print(fila1)
-  print(fila2)
-  print(fila3)
+  fila1Vista = fila1[0] + '|' + fila1[1] + '|' + fila1[2] 
+  fila2Vista = fila2[0] + '|' + fila2[1] + '|' + fila2[2]
+  fila3Vista = fila3[0] + '|' + fila3[1] + '|' + fila3[2]
+  print(fila1Vista)
+  print(fila2Vista)
+  print(fila3Vista)
