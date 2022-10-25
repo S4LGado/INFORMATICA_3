@@ -14,12 +14,6 @@ cruz = 0
 jugando = True
 ganaCirculo = False
 ganaCruz = False
-chuza = 0
-chuza1 = 0
-chuza2 = 0
-chuza3 = 0
-chuza4 = 0
-chuza5 = 0
 while jugando:
   if fila1[0] == "O" and fila2[0] == "O" and fila3[0] == "O":
     ganaCirculo = True
@@ -60,6 +54,18 @@ while jugando:
     print("Gana Cruz")
     break
   circulo = int(input("Digite en que posicion colocar el circulo: "))
+  if circulo in [1,2,3]:
+      if fila1[circulo-1] in ['X','O'] :
+          print('Posicion no valida')
+          circulo = int(input("Digite en que posicion colocar el circulo: "))
+  if circulo in [4,5,6]:
+      if fila2[circulo-4] in ['X','O'] :
+          print('Posicion no valida')
+          circulo = int(input("Digite en que posicion colocar el circulo: "))
+  if circulo in [7,8,9]:
+      if fila3[circulo-7] in ['X','O'] :
+          print('Posicion no valida')
+          circulo = int(input("Digite en que posicion colocar el circulo: "))
   if circulo in [1,2,3]:
     fila1.pop(circulo-1)
     fila1.insert(circulo-1,"O")
@@ -114,6 +120,18 @@ while jugando:
     print("Gana Cruz")
     break
   cruz = int(input("Digite en que posicion colocar la cruz: "))
+  if cruz in [1,2,3]:
+      if fila1[cruz-1] in ['X','O'] :
+          print('Posicion no valida')
+          cruz = int(input("Digite en que posicion colocar la cruz: "))
+  if cruz in [4,5,6]:
+      if fila2[cruz-4] in ['X','O'] :
+          print('Posicion no valida')
+          cruz = int(input("Digite en que posicion colocar la cruz: "))      
+  if cruz in [7,8,9]:
+      if fila3[cruz-7] in ['X','O'] :
+          print('Posicion no valida')
+          cruz = int(input("Digite en que posicion colocar la cruz: "))
   if cruz in [1,2,3]:
     fila1.pop(cruz-1)
     fila1.insert(cruz-1,"X")
