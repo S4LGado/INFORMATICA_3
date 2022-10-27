@@ -1,5 +1,11 @@
 # 25 / 10
-
+"""
+Este modulo contiene las funciones de interfaz:
+* reglas() => retorna un string con las reglas
+* turnoCirculo() => lee el turno del circulo
+* turnoCruz() => lee el turno de la cruz
+* imprimirTablero() => retorna una impresion del tablero de juego actual
+"""
 def reglas():
   print("BIENVENIDO A JUGAR TRICKY")
   print("REGLAS")

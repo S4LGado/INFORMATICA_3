@@ -1,4 +1,15 @@
 # 25 / 10
+"""
+Este modulo contiene las funciones logicas del juego:
+* declararVariables() => retorna las variables necesarias para el juego
+* ganaCirculo() => retorna un booleano True si gana Circulo
+* ganaCruz() => retorna un booleano True si gana Cruz
+* verificarGanador() => Entrega un Booleano dependiendo del ganador
+* verificarPosicionCirculo() => Verifica que la posicion sea valida
+* verificarPosicionCruz() => Verifica que la posicion sea valida
+* insertarCirculo() => altera las filas para poner el circulo en la posicion dada
+* insertarCruz() => altera las filas para poner la cruz en la posicion dad
+"""
 import interfaz
 
 def declararVariables():
@@ -10,12 +21,6 @@ def declararVariables():
     jugando = True
     ganaCirculo = False
     ganaCruz = False
-    chuza = 0
-    chuza1 = 0
-    chuza2 = 0
-    chuza3 = 0
-    chuza4 = 0
-    chuza5 = 0
 
 def ganaCirculo():
     ganaCirculo = True
