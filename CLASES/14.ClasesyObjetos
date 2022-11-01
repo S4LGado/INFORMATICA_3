@@ -1,0 +1,39 @@
+01 - 11 - 2022
+
+CLASES Y OBJETOS
+
+Los onjetos, clases y metodos de un programa se le llama programacion orientada a objetos (POO)
+Que es diferente al visto anteriromente (Programacion funcional)
+
+- Esta consitste en modelar cualquier problema en : CLases , Objetos(instancias) y metodos(funcionalizacion)
+
+- Esta relaciona entidades distintas
+
+Clase: Es un modelo o plantilla generica a partir dela cual se crean objetos.
+       Una clase dota a un objeto con dos ingredientes: Atributos y metodos.
+
+Objeto o Instancia: Es una entidad creada a partir de una clase dotada con
+                    atributos y metodos.
+
+Atributos o Propiedades: Son aquellos datos que caracterizan a un objeto, se obtienen 
+                         a partir de una clase generica. Sin embargo, cada 
+                         onjeto se puede diferenciar de otro, al darle atributos distintos.
+
+Metodos: Son aquellas funcionalidades de los objetos, se hereda a partir de una clase generica.
+
+Instanciar: Actividad escencial de la POO, consiste en crear objetos a partir de una clase.
+
+EJEMPLOS:
+1 - Determinar las clases, objetos, atributos y metodos de los siguientes codigos en python.
+
+* Los numeros enteros
+* Cadenas de texto
+* Secuencias de numeros
+
+* Cadenas de texto
+
+---------------------------------------------------------------
+
+CLASE ==> str (string)
+OJETOS ==> "Hola mundo" | "Unal" | "Reprobado2" (Se diferencian por tamano si es alfa numerico o alfabetico nada mas
+                                                 posee minusculas y mayusculas)

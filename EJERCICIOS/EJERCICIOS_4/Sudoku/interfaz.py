@@ -1,10 +1,6 @@
 def explicarJuego():
     explicacion = """
     ====================================================
-    Este es el juego triqui
-    
-    Es un juego de 2 jugadores, para ganar debe 
-    completar 3 caracteres iguales en linea ("x" o "o")
     
     Para ingresar la posicion en el juego, guiese
     con los siguientes numeros
