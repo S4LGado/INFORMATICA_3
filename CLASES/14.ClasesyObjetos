@@ -35,5 +35,16 @@ EJEMPLOS:
 ---------------------------------------------------------------
 
 CLASE ==> str (string)
-OJETOS ==> "Hola mundo" | "Unal" | "Reprobado2" (Se diferencian por tamano si es alfa numerico o alfabetico nada mas
-                                                 posee minusculas y mayusculas)
+OJETOS ==> "Hola mundo" | "Unal" | "Reprobado2" 
+ATRIBUTOS ==> Se diferencian por tamano si es alfa numerico o alfabetico nada mas
+              posee minusculas y mayusculas
+METODOS ==> +, *, len()
+
+* Numeros enteros
+
+----------------------------------------------------------------
+
+CLASE ==> int (entero)
+OBJETOS ==> 123123 | 123 | 245
+ATRIBUTOS ==> Se diferencian por su cantidad de cifras, si es par o primo. 
+METODOS ==> +, *, %
