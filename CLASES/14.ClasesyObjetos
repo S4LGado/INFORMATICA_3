@@ -48,3 +48,31 @@ CLASE ==> int (entero)
 OBJETOS ==> 123123 | 123 | 245
 ATRIBUTOS ==> Se diferencian por su cantidad de cifras, si es par o primo. 
 METODOS ==> +, *, %
+
+
+08 - 11 - 2022
+
+------------------------ COMO CREAR MIS PROPIAS CLASES EN PYTHON ------------------------
+
+Las clases en python, se definen utilziando palabras reservadas:
+
+class  ==> Avisa a python que se creará una clase genérica
+def __init__(self, <ValorAtributo>) ==> Mecanismo mediante el cual cremaos atributos genericos, se usa
+def <metodo>(self, <ValorEntrada>) ==> Mecanismo mediante el cual creamos métodos, se usa las veces
+self ==> Permite hacer referencia al objeto creado
+
+--------------------------------- notacion -------------------
+
+class <NombreDeLaClase>:
+       def __init__(self,<ValorAtributo>):
+              self.edad = <ValorAtributo>
+       
+       def <metodo1>(self, <ValoEntrada>):
+              <sentencias>
+              return <valorDeRetorno>
+       
+       def <metodo2>(self, <ValorEntrada>):
+              <sentencias>
+              return <ValordeRetorno2>
+
+
