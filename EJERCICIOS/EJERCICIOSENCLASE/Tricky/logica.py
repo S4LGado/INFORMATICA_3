@@ -8,7 +8,7 @@ Este modulo contiene las funciones logicas del juego:
 * verificarPosicionCirculo() => Verifica que la posicion sea valida
 * verificarPosicionCruz() => Verifica que la posicion sea valida
 * insertarCirculo() => altera las filas para poner el circulo en la posicion dada
-* insertarCruz() => altera las filas para poner la cruz en la posicion dad
+* insertarCruz() => altera las filas para poner la cruz en la posicion dada
 """
 import interfaz
 
