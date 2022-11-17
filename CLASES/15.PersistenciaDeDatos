@@ -23,7 +23,6 @@ import json
 #Lectura =>
 with open(<ruta>,<opcion>) as file:
     notas = json.load(file)
-    notas[nombre] = round(calificacion,2)
 
 #Escritura =>
 with open(<ruta>,<opcion>) as file:
