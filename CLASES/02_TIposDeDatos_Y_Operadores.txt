@@ -1,0 +1,29 @@
+24 - 02 - 2023
+
+--------- TIPOS DE DATOS -----------
+
+String: "" '' "HOLA"
+Enteros: 1 2 123 
+Flotantes: 1,2 1,0
+Booleanos: True False "" "a"
+
+Listas: []
+Tuplas: ()
+Diccionarios: {}
+Conjuntos: {}
+
+
+----------- OPERADORES --------------
+
+Aritmeticos: + - *
+             1/5
+             1//5
+             1%5
+             2**3
+             2**0.5
+
+Logicos: True and True
+         False or False
+         not True
+
+Comparativos: 
