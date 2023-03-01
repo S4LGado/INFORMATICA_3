@@ -26,4 +26,4 @@ Logicos: True and True
          False or False
          not True
 
-Comparativos: 
+Comparativos: < > =
