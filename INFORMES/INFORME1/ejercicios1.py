@@ -2,9 +2,9 @@ nombre_completo = "Juan Esteban Salgado"
 
 # EJERCICIO 1
 
-def esMayorDeEdad(Edad):
+def esMayorDeEdad(edad):
     MayorDeEdad = False
-    if Edad >= 18:
+    if edad >= 18:
         MayorDeEdad = True
     return MayorDeEdad
 
