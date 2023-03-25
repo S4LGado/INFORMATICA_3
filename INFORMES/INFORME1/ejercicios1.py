@@ -147,7 +147,7 @@ salarios = {
 codigosAltosSalarios =[]
 
 for i in empleados.keys():
-    for j in range(0,6):
+    for j in range(0,7):
         salarios[i] += empleados[i][j]*productos[j][1]*0.01*productos[j][2]
 
 mayor = 0
