@@ -3,10 +3,10 @@ nombre_completo = "Juan Esteban Salgado"
 # EJERCICIO 1
 
 def esMayorDeEdad(edad):
-    MayorDeEdad = False
+    mayorDeEdad = False
     if edad >= 18:
-        MayorDeEdad = True
-    return MayorDeEdad
+        mayorDeEdad = True
+    return mayorDeEdad
 
 def sumadeDigitos(num):
     num = str(num)
