@@ -192,9 +192,8 @@ puntoA,puntoB = "" , ""
 for i in puntos.keys():
     for j in puntos.keys():
         if i != j:
-          for k in range(0,3):
-              diferencia = ((puntos[i][0] - puntos[j][0])**2 + (puntos[i][1] - puntos[j][1])**2 + (puntos[i][2] - puntos[j][2])**2)**(1/2)
-          if diferencia < menordiferencia:
+            diferencia = ((puntos[i][0] - puntos[j][0])**2 + (puntos[i][1] - puntos[j][1])**2 + (puntos[i][2] - puntos[j][2])**2)**(1/2)
+            if diferencia < menordiferencia:
               menordiferencia = diferencia
               puntoA= i
               puntoB= j
