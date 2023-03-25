@@ -66,10 +66,11 @@ for j in range(0,10):
         if trayectos[i][j] == "Si":
             contador += 1
     for i in trayectos.keys():
-        if contador == 0:
-            diccionarioPagos[i] += 10000/10
         if trayectos[i][j] == "Si":
             diccionarioPagos[i] += 15000/contador 
+    if contador == 0:
+        for j in trayectos.keys():
+            diccionarioPagos[j] += 10000/10
 
 for i in diccionarioPagos.keys():
     diccionarioPagos[i] = round(diccionarioPagos[i],2)
