@@ -19,7 +19,7 @@ data =[['1','1','1','1','0'],
        ['1','0','1','0','1'],
        ['1','0','1','1','0'],
        ['1','1','1','0','0'],
-       ['1','0','0','1','1']
+       ['1','0','0','1','1'],
        ['1','0','1','0','0']]
 
 usoDeTaxi = numpy.array(data)
@@ -35,7 +35,7 @@ Rendimiento --    "C"       "B"      "B"        "B"        "C"      "B"      "A"
 indices = ['Emplea_1 ', 'Emplea_2 ', 'Emplea_3 ', 'Emplea_4 ', 'Emplea_5 ', 'Emplea_6 ', 'Emplea_7 ', 'Emplea_8 ', 'Emplea_9 ', 'Emplea_10',  'Emplea_11',  'Emplea_12',  'Emplea_13',  'Emplea_14',  'Emplea_15',  'Emplea_16',  'Emplea_17',  'Emplea_18',  'Emplea_19',  'Emplea_20',  'Emplea_21',  'Emplea_22',  'Emplea_23',  'Emplea_24',  'Emplea_25',  'Emplea_26',  'Emplea_27']
 datos = [3, 2,      2,        2,        3,      2,      1,        3,       2,        1,        3,       2,        2,        2,         2,        1,       2,        1,         1,        3,       2,        2,        2,         2,         3,       1,       3 ]
 
-Rendimiento = pandas.series(data= datos, index = indices)
+Rendimiento = pandas.Series(data= datos, index = indices)
 
 #Ejercicio 3 ===============>
 """
@@ -56,7 +56,7 @@ Cod   Nombre               Cargo          Salario
 0013   Viviana Quesada     Guardia        $ 1.500.000
 """
 
-columnas = ['Nombre','Cargo','Salario','experiencia']
+columnas = ['Nombre','Cargo','Salario','Años_experiencia']
 indices = [
 '0001',
 '0002',
@@ -74,21 +74,21 @@ indices = [
 ]
 
 datos = [
-['Cristian Pachon   ' , 'Ingeniero    '  ,3200000,8]
-['Daniela Pineda    ' , 'Programador  '  ,4300000,9]
-['Esteban Murcia    ' , 'Programador  '  ,4600000,10]
-['Jose Guzman       ' , 'Ingeniero    '  ,3900000,8]
-['Camilo Rodriguez  ' , 'Ensamblador  '  ,1200000,2]
-['Mariana Londoño   ' , 'Ensamblador  '  ,1100000,1]
-['Estefania Muños   ' , 'Ensamblador  '  ,1700000,5]
-['Cristian Rodriguez' , 'Ingeniero    '  ,3100000,8]
-['Natalia Alzate    ' , 'Ensamblador  '  ,2200000,6]
-['Juan Sanabria     ' , 'Diseñador    '  ,5100000,11]
-['Juanita Calderon  ' , 'Ensamblador  '  ,1300000,4]
-['Laura Quintero    ' , 'Administrador'  ,2500000,7]
+['Cristian Pachon   ' , 'Ingeniero    '  ,3200000,8],
+['Daniela Pineda    ' , 'Programador  '  ,4300000,9],
+['Esteban Murcia    ' , 'Programador  '  ,4600000,10],
+['Jose Guzman       ' , 'Ingeniero    '  ,3900000,8],
+['Camilo Rodriguez  ' , 'Ensamblador  '  ,1200000,2],
+['Mariana Londoño   ' , 'Ensamblador  '  ,1100000,1],
+['Estefania Muños   ' , 'Ensamblador  '  ,1700000,5],
+['Cristian Rodriguez' , 'Ingeniero    '  ,3100000,8],
+['Natalia Alzate    ' , 'Ensamblador  '  ,2200000,6],
+['Juan Sanabria     ' , 'Diseñador    '  ,5100000,11],
+['Juanita Calderon  ' , 'Ensamblador  '  ,1300000,4],
+['Laura Quintero    ' , 'Administrador'  ,2500000,7],
 ['Viviana Quesada   ' , 'Guardia      '  ,1500000,3]]
 
-Empleados = pandas.DataFrame(datos,indices,columnas)
+dataFrameEmpresa = pandas.DataFrame(datos,indices,columnas)
 
       
 """
