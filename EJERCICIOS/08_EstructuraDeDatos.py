@@ -1,7 +1,7 @@
 import numpy
 import pandas
 
-#Eje3icio 1 ===============>
+#Ejericio 1 ===============>
 """
 Crear un solo arreglo numpy con la siguiente informacion 
 de los estudiantes que usan el servicio de taxi
@@ -56,7 +56,7 @@ Cod   Nombre               Cargo          Salario
 0013   Viviana Quesada     Guardia        $ 1.500.000
 """
 
-columnas = ['Nombre','Cargo','Salario']
+columnas = ['Nombre','Cargo','Salario','experiencia']
 indices = [
 '0001',
 '0002',
@@ -74,18 +74,65 @@ indices = [
 ]
 
 datos = [
-['Cristian Pachon   ' , 'Ingeniero    '  ,3200000]
-['Daniela Pineda    ' , 'Programador  '  ,4300000]
-['Esteban Murcia    ' , 'Programador  '  ,4600000]
-['Jose Guzman       ' , 'Ingeniero    '  ,3900000]
-['Camilo Rodriguez  ' , 'Ensamblador  '  ,1200000]
-['Mariana Londoño   ' , 'Ensamblador  '  ,1100000]
-['Estefania Muños   ' , 'Ensamblador  '  ,1700000]
-['Cristian Rodriguez' , 'Ingeniero    '  ,3100000]
-['Natalia Alzate    ' , 'Ensamblador  '  ,2200000]
-['Juan Sanabria     ' , 'Diseñador    '  ,5100000]
-['Juanita Calderon  ' , 'Ensamblador  '  ,1300000]
-['Laura Quintero    ' , 'Administrador'  ,2500000]
-['Viviana Quesada   ' , 'Guardia      '  ,1500000]]
+['Cristian Pachon   ' , 'Ingeniero    '  ,3200000,8]
+['Daniela Pineda    ' , 'Programador  '  ,4300000,9]
+['Esteban Murcia    ' , 'Programador  '  ,4600000,10]
+['Jose Guzman       ' , 'Ingeniero    '  ,3900000,8]
+['Camilo Rodriguez  ' , 'Ensamblador  '  ,1200000,2]
+['Mariana Londoño   ' , 'Ensamblador  '  ,1100000,1]
+['Estefania Muños   ' , 'Ensamblador  '  ,1700000,5]
+['Cristian Rodriguez' , 'Ingeniero    '  ,3100000,8]
+['Natalia Alzate    ' , 'Ensamblador  '  ,2200000,6]
+['Juan Sanabria     ' , 'Diseñador    '  ,5100000,11]
+['Juanita Calderon  ' , 'Ensamblador  '  ,1300000,4]
+['Laura Quintero    ' , 'Administrador'  ,2500000,7]
+['Viviana Quesada   ' , 'Guardia      '  ,1500000,3]]
 
 Empleados = pandas.DataFrame(datos,indices,columnas)
+
+      
+"""
+Graficar la dispersion => Años de experiencia vs salario
+Graficar el histograma => salario
+graficar el histograma => Años de experiencia
+graficar el diagrama de barras => cargo vs salario promedio
+"""
+
+# Graficar la dispersion => Años de experiencia vs salario
+
+import matplotlib.pyplot as plt
+
+x = dataFrameEmpresa["Años_experiencia"].values
+y = dataFrameEmpresa["Salario"].values
+plt.figure()
+plt.plot(x,y,"or",label = "Dispersion") #Se agrega el "or" para que se vean solo los puntos de dispersion
+plt.title(r"$Años\ de\ experiencia\ vs\ Salario$") #Este arreglo se hace para obtener letra cursiva
+plt.xlabel(r"$Años$")
+plt.ylabel(r"$Salario$")
+plt.grid()
+plt.legend()
+plt.show()
+
+
+#Graficar el histograma => salario
+x = dataFrameEmpresa["Salario"].values
+plt.figure()
+plt.hist(x,bins = 5 , density = 10)
+plt.title(r"$Histograma$")
+plt.xlabel(r"$Salarios$")
+plt.ylabel(r"$Frecuencias$")
+plt.show()
+plt.savefig('figura2.png') #Se hace para guardar la imagen cada que se ejecute el programa
+
+#Graficar el histograma => Años de experiencia
+x = dataFrameEmpresa["Años_experiencia"].values
+plt.figure()
+plt.hist(x,bins = 5 , density = 10, color = "#ff1111") # Aqui se puede cambiar el color
+plt.title(r"$Histograma$")
+plt.xlabel(r"$Años_experiencia$")
+plt.ylabel(r"$Frecuencias$")
+plt.show()
+
+#  graficar el diagrama de barras => cargo vs salario promedio
+print(dataFrameEmpresa)
+print(dataFrameEmpresa[["Cargo","Salario"]].groupby(["Cargo"]).mean()) # Es necesario colocar doble [[]] ya que de lo contrario va a entregar una serie
