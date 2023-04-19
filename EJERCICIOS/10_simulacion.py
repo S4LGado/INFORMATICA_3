@@ -28,7 +28,7 @@ def random_configuration():
 
 random_configuration()
 
-# Visualizacion de los espines
+# Visualizacin de los espines
 
 def plot_spins():
     pyplot.figure()
@@ -40,13 +40,12 @@ def plot_spins():
     pyplot.yticks(range(-1,length+1)) # Rango en eje Y
     pyplot.gca().set_aspect("equal") # Esto se agrega para que la grafica no sea mas ancha de lo normal
     #pyplot.grid()
-    pyplot.savefig()
     pyplot.show()
 
 # Asignacion de vecinos
 
 nbhs = defaultdict(list) # Diccionario de vecinos
-for site in spins.keys:
+for site in spins.keys():
     x, y = site
     if x + 1 < length: # Vecino por la derecha
         nbhs[site].append(((x + 1) % length, y))
@@ -60,7 +59,7 @@ for site in spins.keys:
 # Definiciones para calculo de energia
 
 def energy_site(site):
-    energy = 0.0 
+    energy = 0.0
     for nbh in nbhs[site]:
         energy += spins[site] * spins[nbh] #Hamiltoniano
     return -J * energy
@@ -103,7 +102,7 @@ def monte_carlo_step(T):
 
 # Simulacion
 
-amount_mcs = 10000 # Pasos montecarlo
+amount_mcs = 100 # Pasos montecarlo
 T_high = 5.0 
 T_low = 0.01
 step = -0.1
@@ -119,3 +118,24 @@ for ind_T, T in enumerate(temps):
         monte_carlo_step(T)
         energies[ind_T, i] = total_energy()
         magnetizations[ind_T, i] = magnetization()
+plot_spins()
+
+tau = amount_mcs // 2
+energy_mean = numpy.mean(energies[:, tau:], axis=1)
+magnetization_mean = abs(numpy.mean(magnetizations[:, tau:], axis=1))
+
+pyplot.figure()
+pyplot.plot(temps, energy_mean, label="Energy")
+pyplot.legend()
+pyplot.xlabel(r"$T$")
+pyplot.ylabel(r"$\left<E\right>$")
+pyplot.grid()
+pyplot.show()
+
+pyplot.figure()
+pyplot.plot(temps, magnetization_mean, label="Magnetization")
+pyplot.legend()
+pyplot.xlabel(r"$T$")
+pyplot.ylabel(r"$\left<M\right>$")
+pyplot.grid()
+pyplot.show()
