@@ -1,0 +1,50 @@
+import numpy as np
+
+
+deltaEc = 1
+deltaEv = 1
+Na = 1
+Nd = 1
+nin = 1
+nip = 1
+Ncp = 1
+Ncn = 1
+Nvc = 1
+Nvn = 1 
+Vbi = 1
+V = 1 
+epsilonn = 1
+epsilonp = 1
+Xn = 1
+Wn = 1
+Lp = 1
+Sp = 1
+Dp = 1
+alpha1 = 1
+R = 1
+T = 1
+N0 = 1
+Xp = 1
+alpha2 = 1
+p0 = 1
+Dn = 1
+n0 = 1
+Wp = 1
+Tp = 1
+Tn = 1
+kb = 1
+ncn = 1
+nvp = 1
+q = 1
+Sn = 1
+Ln = 1
+taup = 1
+taun = 1
+
+Vbi = (deltaEc - deltaEv)/2 + kb*T*np.log((Na*Nd)/(nip*nin)) + kb*T*np.log((Ncp*Nvn)/(ncn*nvp))
+Xn = ((2*epsilonp*epsilonn*Na(Vbi-V))/(q*Nd(epsilonn*Nd + epsilonp*Na)))**(1/2)
+Xp = ((2*epsilonp*epsilonn*Nd(Vbi-V))/(q*Na(epsilonn*Nd + epsilonp*Na)))**(1/2)
+J0p = ((q*Dp*p0)/(Lp))*((((Sp*Lp)/(Dp))*np.cosh((Wn-Xn)/Lp)+np.sinh((Wn-Xn)/Lp))/(((Sp*Lp)/(Dp))*np.sinh((Wn-Xn)/Lp)+np.cosh((Wn-Xn)/Lp)))
+J0n = ((q*Dn*n0)/(Ln))*((((Sn*Ln)/(Dn))*np.cosh((Wp-Xp)/Ln)+np.sinh((Wp-Xp)/Ln))/(((Sn*Ln)/(Dn))*np.sinh((Wp-Xp)/Ln)+np.cosh((Wp-Xp)/Ln)))
+J00 = q*(((Xn*nin)/(taup))+((Xp*nip)/(taun)))
+J0 = J0p + J0n
