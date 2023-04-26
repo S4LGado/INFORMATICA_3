@@ -40,7 +40,8 @@ Sn = 1
 Ln = 1
 taup = 1
 taun = 1
-
+jscr = 1
+R = 1
 Vbi = (deltaEc - deltaEv)/2 + kb*T*np.log((Na*Nd)/(nip*nin)) + kb*T*np.log((Ncp*Nvn)/(ncn*nvp))
 Xn = ((2*epsilonp*epsilonn*Na(Vbi-V))/(q*Nd(epsilonn*Nd + epsilonp*Na)))**(1/2)
 Xp = ((2*epsilonp*epsilonn*Nd(Vbi-V))/(q*Na(epsilonn*Nd + epsilonp*Na)))**(1/2)
@@ -48,3 +49,7 @@ J0p = ((q*Dp*p0)/(Lp))*((((Sp*Lp)/(Dp))*np.cosh((Wn-Xn)/Lp)+np.sinh((Wn-Xn)/Lp))
 J0n = ((q*Dn*n0)/(Ln))*((((Sn*Ln)/(Dn))*np.cosh((Wp-Xp)/Ln)+np.sinh((Wp-Xp)/Ln))/(((Sn*Ln)/(Dn))*np.sinh((Wp-Xp)/Ln)+np.cosh((Wp-Xp)/Ln)))
 J00 = q*(((Xn*nin)/(taup))+((Xp*nip)/(taun)))
 J0 = J0p + J0n
+jscrlambda = q*N0(1-R)*T*numpy.exp(-alpha1(Wn-Xn))*((1-numpy.exp(-alpha1*Xn))+numpy.exp(-alpha1*Xn)*(1-numpy.exp(-alpha2*Xp)))
+jnlambda = ((q*N0*(1-R)*T*alpha2*Ln)/((alpha2**2)*(Ln**2)-1))*numpy.exp(-alpha1*Wn - alpha2*Wp)*(alpha2*Ln - ((Sn*Ln/Dn)*((numpy.cosh((Wp-Xp)/Ln)-numpy.exp(-alpha2(Wp-Xp))))+numpy.sinh((Wp-Xp)/Ln)+alpha2*Ln*numpy.exp(-alpha2*(Wp-Xp)))/((Sn*Ln/Dn)*numpy.sinh((Wp-Xp)/Ln)+numpy.cosh((Wp-Xp)/Ln)))
+jplambda = ((q*N0*(1-R)*T*alpha2*Ln)/((alpha2**2)*(Ln**2)-1))*(-alpha1*Lp*numpy.exp(-alpha1*(Wn-Xn)) + ((Sp*Lp/Dp)+alpha1*Lp-numpy.exp(-alpha1*(Wn-Xn))*(((Sp*Lp/Dp)*numpy.cosh((Wn-Xn)/Lp)+numpy.sinh((Wn-Xn)/Lp)))))/((Sp*Lp/Dp)*numpy.sinh((Wp-Xp)/Ln)+numpy.cosh((Wp-Xp)/Ln))
+jdarkV = J0*(numpy.exp((q*V)/(Kb*T))-1)+J00*(numpy.exp((q*V)/(2*Kb*T))-1)
