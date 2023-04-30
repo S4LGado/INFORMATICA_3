@@ -5,8 +5,8 @@ k=1
 r = 1
 T = 0.01
 q = 1
-elec_Circunferenciales = 50
-elec_Internos = 100
+elec_Circunferenciales = 20
+elec_Internos = 10
 
 def crear_Estado_Inicial():
     angulo = 6.28/(elec_Circunferenciales)
@@ -54,7 +54,7 @@ def metropolis(x_in,y_in,sumEnergias_old):  #cambio aleatorio de la posicion de 
     x_old = x_in
     y_old = y_in
     x_new = [np.random.random() - 0.5 for i in range(elec_Internos)]
-    y_new = [np.random.random() - 0.5 for i in range(elec_Internos)]
+    y_new = [np.random.random() - 0.5  for i in range(elec_Internos)]
     r=[]
     for i in range(len(x_out)):
       r.append((x_out[i], y_out[i]))
@@ -72,7 +72,7 @@ def metropolis(x_in,y_in,sumEnergias_old):  #cambio aleatorio de la posicion de 
 
 def paso_montecarlo(sumEnergias_old):
     x_new,y_new,x_in,y_in,sumEnergias_old = [],[],[],[],sumEnergias_old
-    for i in range(0,100000):
+    for i in range(0,1000000):
       x_new,y_new,x_in,y_in,sumEnergias_old = metropolis(x_in,y_in,sumEnergias_old)
     return x_new,y_new,x_in,y_in,sumEnergias_old
 
