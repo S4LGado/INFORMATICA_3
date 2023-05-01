@@ -10,7 +10,7 @@ y retorna la corriente producida por la celda (j_cell)
 from PropiedadesMaterialN import *
 from PropiedadesMaterialP import *
 from funcionesDeApoyo import *
-
+from matplotlib import pyplot
 
 def simulation(voltage):        #this function return j_cell of the solar cell
     # Built-in potential --------------------------------------------------------------
@@ -41,15 +41,48 @@ def simulation(voltage):        #this function return j_cell of the solar cell
     j_cell  =  j_ph - j_dark
     return j_cell
 
-# ========================Mi primera celda simulada========================
-voltage = 0.5  #Voltios
-j_celda = simulation(voltage)   #densidad de corriente que produce celda
-pot_celda = voltage * j_celda   #densidad de potencia electrica producida por la celda
-
-print("voltaje: ", voltage)
-print("densidad de corriente: ", j_celda)
-print("densidad de potencia: ", pot_celda)
-
-
 # =======================Simulacion variando el voltaje====================
 
+voltage = list(range(0,55,1))
+for i in range(0,55,1):
+    voltage[i] = 0.01*float(voltage[i])
+j_celda = []
+pot_celda = []
+for i in voltage:
+    j_celda.append(simulation(i))
+for i in range(0,55,1):
+    pot_celda.append(voltage[i]*j_celda[i])
+
+PMMP = max(pot_celda)
+VMPP = voltage[pot_celda.index(PMMP)]
+JMPP = j_celda[pot_celda.index(PMMP)]
+Jsc = j_celda[0]
+Voc = 0
+for i in range(0,len(j_celda)):
+    if j_celda[i] < 0:
+        Voc = voltage[i]
+FF = (JMPP*VMPP)/(Jsc*Voc)
+n = (Jsc*Voc*FF)/(P_inc)
+
+print("potencia máxima: ",PMMP)
+print("densidad de corriente máxima: ",JMPP)
+print("voltaje máximo: ",VMPP)
+print("Jsc: ",Jsc," Voc: ",Voc)
+print("FF: ",FF)
+print("n: ",n )
+
+pyplot.figure()
+pyplot.plot(voltage, j_celda, label="Current Density")
+pyplot.legend()
+pyplot.xlabel(r"$T$")
+pyplot.ylabel(r"$\left<E\right>$")
+pyplot.grid()
+pyplot.show()
+
+pyplot.figure()
+pyplot.plot(voltage, pot_celda, label="power")
+pyplot.legend()
+pyplot.xlabel(r"$T$")
+pyplot.ylabel(r"$\left<M\right>$")
+pyplot.grid()
+pyplot.show()
