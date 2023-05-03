@@ -5,8 +5,8 @@ k=1
 r = 1
 T = 0.01
 q = 1
-elec_Circunferenciales = 20
-elec_Internos = 10
+elec_Circunferenciales = 10
+elec_Internos = 15
 
 def crear_Estado_Inicial():
     angulo = 6.28/(elec_Circunferenciales)

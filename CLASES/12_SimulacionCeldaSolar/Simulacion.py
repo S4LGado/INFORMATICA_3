@@ -53,9 +53,9 @@ for i in voltage:
 for i in range(0,55,1):
     pot_celda.append(voltage[i]*j_celda[i])
 
-PMMP = max(pot_celda)
-VMPP = voltage[pot_celda.index(PMMP)]
-JMPP = j_celda[pot_celda.index(PMMP)]
+PMPP = max(pot_celda)
+VMPP = voltage[pot_celda.index(PMPP)]
+JMPP = j_celda[pot_celda.index(PMPP)]
 Jsc = j_celda[0]
 Voc = 0
 for i in range(0,len(j_celda)):
@@ -64,7 +64,7 @@ for i in range(0,len(j_celda)):
 FF = (JMPP*VMPP)/(Jsc*Voc)
 n = (Jsc*Voc*FF)/(P_inc)
 
-print("potencia máxima: ",PMMP)
+print("potencia máxima: ",PMPP)
 print("densidad de corriente máxima: ",JMPP)
 print("voltaje máximo: ",VMPP)
 print("Jsc: ",Jsc," Voc: ",Voc)
@@ -72,17 +72,23 @@ print("FF: ",FF)
 print("n: ",n )
 
 pyplot.figure()
-pyplot.plot(voltage, j_celda, label="Current Density")
-pyplot.legend()
-pyplot.xlabel(r"$T$")
-pyplot.ylabel(r"$\left<E\right>$")
-pyplot.grid()
-pyplot.show()
+pyplot.plot(voltage, [n*1000 for n in j_celda], voltage, [n*4000 for n in pot_celda])
+pyplot.ylim(0,80)
+pyplot.xlim(0,0.6)
+pyplot.text(0.01,1000*JMPP+1,'JMPP')
+pyplot.plot([0.6,VMPP],[4000*PMPP,4000*PMPP],"--",color='r')
+pyplot.plot([0,VMPP],[1000*JMPP,1000*JMPP],"--",color="black")
+pyplot.plot([VMPP,VMPP],[0,1000*JMPP],"--",color="black")
+pyplot.text(0.61,4000*PMPP,'PMPP',color='r')
+pyplot.text(Voc,-2.5,'Voc')
+pyplot.text(VMPP,-2.5,'VMPP')
+pyplot.plot(VMPP,4000*PMPP,marker = 'o',color= 'r')
+pyplot.plot(VMPP,1000*JMPP,marker= 'o',color="black")
+##pyplot.legend(['Current density','Power'])
+pyplot.xlabel("Voltage")
+pyplot.ylabel("Current Density [mA/cm\xb2]",color="blue")
+pyplot.twinx()
+pyplot.ylim(0,16)
+pyplot.ylabel("Power [mW/cm\xb2]",color="orange")
 
-pyplot.figure()
-pyplot.plot(voltage, pot_celda, label="power")
-pyplot.legend()
-pyplot.xlabel(r"$T$")
-pyplot.ylabel(r"$\left<M\right>$")
-pyplot.grid()
 pyplot.show()
