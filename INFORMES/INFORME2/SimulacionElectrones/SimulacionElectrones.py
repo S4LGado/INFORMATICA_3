@@ -6,7 +6,7 @@ k = 1
 r = 1
 T = 0.01
 q = 1
-e_out = 30
+e_out = 20
 e_in = 30
 
 def crear_Estado_Inicial():
@@ -17,7 +17,7 @@ def crear_Estado_Inicial():
     y_in = [np.random.random()*2 - 1 for i in range(e_in)]
     return x_out,y_out,x_in,y_in
 
-def dibujar_sistema(x_out,y_out,x_in,y_in):
+def dibujar_sistema1(x_out,y_out,x_in,y_in):
     plt.figure()
     plt.plot(x_out,y_out, "ro")
     plt.plot(x_in, y_in, "bo")
@@ -25,10 +25,23 @@ def dibujar_sistema(x_out,y_out,x_in,y_in):
     plt.xlim(-1.0, 1.0)
     plt.ylim(-1.0, 1.0)
     plt.grid()
+    plt.savefig("EstadoInicial.png")
+    plt.show()
+
+def dibujar_sistema2(x_out,y_out,x_in,y_in):
+    plt.figure()
+    plt.plot(x_out,y_out, "ro")
+    plt.plot(x_in, y_in, "bo")
+    plt.gca().set_aspect("equal")
+    plt.xlim(-1.0, 1.0)
+    plt.ylim(-1.0, 1.0)
+    plt.grid()
+    plt.savefig("EstadoFinal.png")
     plt.show()
 
 x_out,y_out, x_in,y_in = crear_Estado_Inicial()
-dibujar_sistema(x_out,y_out,x_in,y_in)
+dibujar_sistema1(x_out,y_out,x_in,y_in)
+
 
 r=[]
 for i in range(len(x_out)):
@@ -70,7 +83,7 @@ def monte_carlo_step():
     for i in range(len(r_in)):
         metropolis()
 print(calcular_energia_total())
-amount_mcs = 1000
+amount_mcs = 10000
 energies = np.zeros(shape = amount_mcs)
 for i in range(amount_mcs):
     monte_carlo_step()
@@ -82,5 +95,7 @@ for punto in r_in:
     newx_in.append(punto[0])
     newy_in.append(punto[1])
 
-dibujar_sistema(x_out, y_out, newx_in, newy_in)
+dibujar_sistema2(x_out, y_out, newx_in, newy_in)
+
+
 print(calcular_energia_total())

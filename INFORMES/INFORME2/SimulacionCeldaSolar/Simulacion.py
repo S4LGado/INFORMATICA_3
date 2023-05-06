@@ -90,5 +90,5 @@ pyplot.ylabel("Current Density [mA/cm\xb2]",color="blue")
 pyplot.twinx()
 pyplot.ylim(0,16)
 pyplot.ylabel("Power [mW/cm\xb2]",color="orange")
-
+pyplot.savefig("PowerAndCurrentDensityVSVoltage.png")
 pyplot.show()
