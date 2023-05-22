@@ -67,7 +67,7 @@ for i in range(len(estaciones)):
 
 
 
-estaciones_hidrologicas = gpd.read_file("RedHidrologica/Red_Hidrometeorol%C3%B3gica_CAR.shp")
+estaciones_hidrologicas = gpd.read_file("RedHidrologica/Red_Hidrometeorológica_CAR.shp")
 cundinamarca = gpd.read_file("Cundinamarca/municipio25.shp", encoding = "utf-8")
 croquis_cun = gpd.read_file("Cundinamarca/municipio25.shp", encoding = "utf-8")
 estaciones_activas = ["REPRESA SISGA", "RAMADA LA", "EL PINO", "ZIPAQUIRA", "TESORO", "GUATAVITA - LOS MONOLITOS", "ENCANTO EL", "ISLA DEL SANTUARIO", "CHECUA", "VENECIA"]
